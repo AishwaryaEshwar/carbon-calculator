@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carbon Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1> Recipe Carbon Calculator</h1>
+
+    <form id="uploadForm">
+
+  <label>Upload PDF</label>
+  <input type="file" id="pdfFile" required>
+
+  <label>Upload CO2 Excel</label>
+  <input type="file" id="co2File" required>
+
+  <button type="submit">
+    Process Files
+  </button>
+
+</form>
+
+<p id="status"></p>
+
+
+<button id="downloadBtn" style="display:none;">Download Result</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

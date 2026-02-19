@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c7a2c;
+}
+
+label {
+    margin-top: 15px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: #2c7a2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #256b25;
+}
+
+#status {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.progress-container {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #2c7a2c;
+  border-radius: 10px;
+}
