@@ -3,8 +3,10 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
 
     const pdfFile = document.getElementById("pdfFile").files[0];
     const co2File = document.getElementById("co2File").files[0];
+
     const status = document.getElementById("status");
     const downloadBtn = document.getElementById("downloadBtn");
+    const spinner = document.getElementById("spinner");
 
     if (!pdfFile || !co2File) {
         status.innerText = "Please select both files.";
@@ -15,11 +17,12 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
     formData.append("pdf_file", pdfFile);
     formData.append("co2_file", co2File);
 
-    status.innerText = "Processing... Please wait.";
+    status.innerText = "";
     downloadBtn.style.display = "none";
+    spinner.style.display = "flex";
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/upload", {
+        const response = await fetch("/upload", {
             method: "POST",
             body: formData
         });
@@ -29,15 +32,15 @@ document.getElementById("uploadForm").addEventListener("submit", async function(
         const data = await response.json();
         const filename = data.filename;
 
+        spinner.style.display = "none";
         status.innerText = "Processing complete! Click below to download.";
-
         downloadBtn.style.display = "inline-block";
 
         downloadBtn.onclick = function() {
-            window.location.href = `http://127.0.0.1:8000/download/${filename}`;
+            window.location.href = `/download/${filename}`;
         };
-
     } catch (error) {
+        spinner.style.display = "none";
         status.innerText = "Error processing files.";
         console.error(error);
     }

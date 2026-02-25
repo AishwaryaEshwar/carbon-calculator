@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     background: #f4f6f8;
@@ -12,6 +13,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 400px;
+    text-align: center;
 }
 
 h1 {
@@ -19,16 +21,9 @@ h1 {
     color: #2c7a2c;
 }
 
-label {
-    margin-top: 15px;
-    display: block;
-}
+label { margin-top: 15px; display: block; }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-}
+input { width: 100%; padding: 8px; margin-top: 5px; }
 
 button {
     margin-top: 20px;
@@ -40,26 +35,8 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #256b25;
-}
+button:hover { background: #256b25; }
 
-#status {
-    margin-top: 15px;
-    text-align: center;
-}
+#status { margin-top: 15px; }
 
-.progress-container {
-  width: 100%;
-  background: #ddd;
-  height: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-}
-
-#progressBar {
-  height: 100%;
-  width: 0%;
-  background: #2c7a2c;
-  border-radius: 10px;
-}
+ 
